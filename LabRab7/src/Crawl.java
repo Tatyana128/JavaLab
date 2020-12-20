@@ -11,7 +11,7 @@ public class Crawl {
 
     public static final String BEFORE_URL = "a href=";
     public static final int MAXDepth = 3;//глубина поиска
-    public static final int MAXThreads = 16;// почему 16????????
+    public static final int MAXThreads = 16;// почему 16
 
     private static int activeThreads = 0;
 
@@ -19,7 +19,7 @@ public class Crawl {
     private static LinkedList<URLDepthPair> UncheckedURL = new LinkedList<>();
 
 
-    private static final Main m = new Main();//что это и зачем ??????
+    private static final Main m = new Main();
 
     public static void main(String[] args) throws IOException {
 
@@ -95,9 +95,9 @@ public class Crawl {
         try {
             // установка соединения
             URLConnection urlConnection = new URL(urlDepthPair.getURLAddress()).openConnection();
-            urlConnection.setConnectTimeout(10_1000);//??
+            urlConnection.setConnectTimeout(10_1000);
 
-            // Reader для чтения ???
+            // Reader для чтения
             BufferedReader in = null;
             InputStreamReader inputStreamReader = null;
             try {
